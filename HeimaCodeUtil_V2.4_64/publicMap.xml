@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <map key="path_3" value="selergoods"/>
+  <map key="package" value="com.pingyougou.selergoods"/>
+  <map key="path_2" value="pingyougou"/>
+  <map key="dbpassword" value="123456"/>
+  <map key="author" value=""/>
+  <map key="projectComment" value="\u54c1\u4f18\u8d2d"/>
+  <map key="project" value="com.pinyougou"/>
+  <map key="dbuser" value="root"/>
+  <map key="path_1" value="com"/>
+  <map key="db" value="pinyougoudb"/>
+  <map key="path_all" value="com/pingyougou/selergoods"/>
+</root>

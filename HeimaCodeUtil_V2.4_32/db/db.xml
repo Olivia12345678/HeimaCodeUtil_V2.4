@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<db name="inst01" driverName="com.mysql.jdbc.Driver" userName="root" passWord="123456" url="jdbc:mysql://127.0.0.1:3306/inst01?useUnicode=true&amp;amp;characterEncoding=UTF8">
+  <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+  <property name="databaseTYPE">MYSQL</property>
+  <property name="generator">&lt;![CDATA[&lt;generator class="native"&gt;&lt;/generator&gt;]]&gt;</property>
+  <property name="driverName">com.mysql.jdbc.Driver</property>
+  <property name="url">jdbc:mysql://127.0.0.1:3306/inst01?useUnicode=true&amp;amp;characterEncoding=UTF8</property>
+  <table name="tb_account_one" name2="accountOne" comment="" key="acct_id">
+    <column name="acct_id" name2="acctId" type="String" dbtype="VARCHAR" comment="" key="PRI" decimal_digits="0" colums_size="16"/>
+    <column name="amount" name2="amount" type="Double" dbtype="DOUBLE" comment="" key="" decimal_digits="2" colums_size="10"/>
+    <column name="frozen" name2="frozen" type="Double" dbtype="DOUBLE" comment="" key="" decimal_digits="2" colums_size="10"/>
+  </table>
+  <table name="tcc_transaction_asset" name2="transactionAsset" comment="" key="transaction_id">
+    <column name="transaction_id" name2="transactionId" type="Integer" dbtype="INT" comment="" key="PRI" decimal_digits="0" colums_size="10"/>
+    <column name="domain" name2="domain" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="100"/>
+    <column name="global_tx_id" name2="globalTxId" type="VARBINARY" dbtype="VARBINARY" comment="" key="" decimal_digits="0" colums_size="32"/>
+    <column name="branch_qualifier" name2="branchQualifier" type="VARBINARY" dbtype="VARBINARY" comment="" key="" decimal_digits="0" colums_size="32"/>
+    <column name="content" name2="content" type="VARBINARY" dbtype="VARBINARY" comment="" key="" decimal_digits="0" colums_size="8000"/>
+    <column name="status" name2="status" type="Integer" dbtype="INT" comment="" key="" decimal_digits="0" colums_size="10"/>
+    <column name="transaction_type" name2="transactionType" type="Integer" dbtype="INT" comment="" key="" decimal_digits="0" colums_size="10"/>
+    <column name="retried_count" name2="retriedCount" type="Integer" dbtype="INT" comment="" key="" decimal_digits="0" colums_size="10"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="" key="" decimal_digits="0" colums_size="19"/>
+    <column name="last_update_time" name2="lastUpdateTime" type="java.util.Date" dbtype="DATETIME" comment="" key="" decimal_digits="0" colums_size="19"/>
+    <column name="version" name2="version" type="Integer" dbtype="INT" comment="" key="" decimal_digits="0" colums_size="10"/>
+  </table>
+</db>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<db name="pinyougoudb" driverName="com.mysql.jdbc.Driver" userName="root" passWord="123456" url="jdbc:mysql://127.0.0.1:3306/pinyougoudb?useUnicode=true&amp;amp;characterEncoding=UTF8">
+  <property name="databaseTYPE">MYSQL</property>
+  <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+  <property name="generator">&lt;![CDATA[&lt;generator class="native"&gt;&lt;/generator&gt;]]&gt;</property>
+  <property name="driverName">com.mysql.jdbc.Driver</property>
+  <property name="url">jdbc:mysql://127.0.0.1:3306/pinyougoudb?useUnicode=true&amp;amp;characterEncoding=UTF8</property>
+  <table name="tb_address" name2="address" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="user_id" name2="userId" type="String" dbtype="VARCHAR" comment="\u7528\u6237ID" key="" decimal_digits="0" colums_size="50"/>
+    <column name="province_id" name2="provinceId" type="String" dbtype="VARCHAR" comment="\u7701" key="" decimal_digits="0" colums_size="10"/>
+    <column name="city_id" name2="cityId" type="String" dbtype="VARCHAR" comment="\u5e02" key="" decimal_digits="0" colums_size="10"/>
+    <column name="town_id" name2="townId" type="String" dbtype="VARCHAR" comment="\u53bf/\u533a" key="" decimal_digits="0" colums_size="10"/>
+    <column name="mobile" name2="mobile" type="String" dbtype="VARCHAR" comment="\u624b\u673a" key="" decimal_digits="0" colums_size="255"/>
+    <column name="address" name2="address" type="String" dbtype="VARCHAR" comment="\u8be6\u7ec6\u5730\u5740" key="" decimal_digits="0" colums_size="255"/>
+    <column name="contact" name2="contact" type="String" dbtype="VARCHAR" comment="\u8054\u7cfb\u4eba" key="" decimal_digits="0" colums_size="255"/>
+    <column name="is_default" name2="isDefault" type="String" dbtype="VARCHAR" comment="\u662f\u5426\u662f\u9ed8\u8ba4 1\u9ed8\u8ba4 0\u5426" key="" decimal_digits="0" colums_size="1"/>
+    <column name="notes" name2="notes" type="String" dbtype="VARCHAR" comment="\u5907\u6ce8" key="" decimal_digits="0" colums_size="255"/>
+    <column name="create_date" name2="createDate" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65e5\u671f" key="" decimal_digits="0" colums_size="19"/>
+    <column name="alias" name2="alias" type="String" dbtype="VARCHAR" comment="\u522b\u540d" key="" decimal_digits="0" colums_size="50"/>
+  </table>
+  <table name="tb_areas" name2="areas" comment="" key="id">
+    <column name="id" name2="id" type="Integer" dbtype="INT" comment="\u552f\u4e00ID" key="PRI" decimal_digits="0" colums_size="10"/>
+    <column name="areaid" name2="areaid" type="String" dbtype="VARCHAR" comment="\u533a\u57dfID" key="" decimal_digits="0" colums_size="20"/>
+    <column name="area" name2="area" type="String" dbtype="VARCHAR" comment="\u533a\u57df\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="cityid" name2="cityid" type="String" dbtype="VARCHAR" comment="\u57ce\u5e02ID" key="" decimal_digits="0" colums_size="20"/>
+  </table>
+  <table name="tb_brand" name2="brand" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u54c1\u724c\u540d\u79f0" key="" decimal_digits="0" colums_size="255"/>
+    <column name="first_char" name2="firstChar" type="String" dbtype="VARCHAR" comment="\u54c1\u724c\u9996\u5b57\u6bcd" key="" decimal_digits="0" colums_size="1"/>
+  </table>
+  <table name="tb_cities" name2="cities" comment="" key="id">
+    <column name="id" name2="id" type="Integer" dbtype="INT" comment="\u552f\u4e00ID" key="PRI" decimal_digits="0" colums_size="10"/>
+    <column name="cityid" name2="cityid" type="String" dbtype="VARCHAR" comment="\u57ce\u5e02ID" key="" decimal_digits="0" colums_size="20"/>
+    <column name="city" name2="city" type="String" dbtype="VARCHAR" comment="\u57ce\u5e02\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="provinceid" name2="provinceid" type="String" dbtype="VARCHAR" comment="\u7701\u4efdID" key="" decimal_digits="0" colums_size="20"/>
+  </table>
+  <table name="tb_content" name2="content" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="category_id" name2="categoryId" type="Long" dbtype="BIGINT" comment="\u5185\u5bb9\u7c7b\u76eeID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="title" name2="title" type="String" dbtype="VARCHAR" comment="\u5185\u5bb9\u6807\u9898" key="" decimal_digits="0" colums_size="200"/>
+    <column name="url" name2="url" type="String" dbtype="VARCHAR" comment="\u94fe\u63a5" key="" decimal_digits="0" colums_size="500"/>
+    <column name="pic" name2="pic" type="String" dbtype="VARCHAR" comment="\u56fe\u7247\u7edd\u5bf9\u8def\u5f84" key="" decimal_digits="0" colums_size="300"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u72b6\u6001" key="" decimal_digits="0" colums_size="1"/>
+    <column name="sort_order" name2="sortOrder" type="Integer" dbtype="INT" comment="\u6392\u5e8f" key="" decimal_digits="0" colums_size="10"/>
+  </table>
+  <table name="tb_content_category" name2="contentCategory" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u7c7b\u76eeID" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u5206\u7c7b\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+  </table>
+  <table name="tb_freight_template" name2="freightTemplate" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u5546\u5bb6ID" key="" decimal_digits="0" colums_size="30"/>
+    <column name="is_default" name2="isDefault" type="String" dbtype="VARCHAR" comment="\u662f\u5426\u9ed8\u8ba4   \uff08\u2018Y\u2019\u662f   'N'\u5426\uff09" key="" decimal_digits="0" colums_size="1"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u6a21\u7248\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="send_time_type" name2="sendTimeType" type="String" dbtype="VARCHAR" comment="\u53d1\u8d27\u65f6\u95f4\uff081:12h  2:24h  3:48h  4:72h  5:7d 6:15d \uff09" key="" decimal_digits="0" colums_size="1"/>
+    <column name="price" name2="price" type="DECIMAL" dbtype="DECIMAL" comment="\u7edf\u4e00\u4ef7\u683c" key="" decimal_digits="0" colums_size="10"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+  </table>
+  <table name="tb_goods" name2="goods" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u4e3b\u952e" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u5546\u5bb6ID" key="" decimal_digits="0" colums_size="20"/>
+    <column name="goods_name" name2="goodsName" type="String" dbtype="VARCHAR" comment="SPU\u540d" key="" decimal_digits="0" colums_size="100"/>
+    <column name="default_item_id" name2="defaultItemId" type="Long" dbtype="BIGINT" comment="\u9ed8\u8ba4SKU" key="" decimal_digits="0" colums_size="19"/>
+    <column name="audit_status" name2="auditStatus" type="String" dbtype="VARCHAR" comment="\u72b6\u6001" key="" decimal_digits="0" colums_size="2"/>
+    <column name="is_marketable" name2="isMarketable" type="String" dbtype="VARCHAR" comment="\u662f\u5426\u4e0a\u67b6" key="" decimal_digits="0" colums_size="1"/>
+    <column name="brand_id" name2="brandId" type="Long" dbtype="BIGINT" comment="\u54c1\u724c" key="" decimal_digits="0" colums_size="19"/>
+    <column name="caption" name2="caption" type="String" dbtype="VARCHAR" comment="\u526f\u6807\u9898" key="" decimal_digits="0" colums_size="100"/>
+    <column name="category1_id" name2="category1Id" type="Long" dbtype="BIGINT" comment="\u4e00\u7ea7\u7c7b\u76ee" key="" decimal_digits="0" colums_size="19"/>
+    <column name="category2_id" name2="category2Id" type="Long" dbtype="BIGINT" comment="\u4e8c\u7ea7\u7c7b\u76ee" key="" decimal_digits="0" colums_size="19"/>
+    <column name="category3_id" name2="category3Id" type="Long" dbtype="BIGINT" comment="\u4e09\u7ea7\u7c7b\u76ee" key="" decimal_digits="0" colums_size="19"/>
+    <column name="small_pic" name2="smallPic" type="String" dbtype="VARCHAR" comment="\u5c0f\u56fe" key="" decimal_digits="0" colums_size="150"/>
+    <column name="price" name2="price" type="Double" dbtype="DECIMAL" comment="\u5546\u57ce\u4ef7" key="" decimal_digits="2" colums_size="10"/>
+    <column name="type_template_id" name2="typeTemplateId" type="Long" dbtype="BIGINT" comment="\u5206\u7c7b\u6a21\u677fID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="is_enable_spec" name2="isEnableSpec" type="String" dbtype="VARCHAR" comment="\u662f\u5426\u542f\u7528\u89c4\u683c" key="" decimal_digits="0" colums_size="1"/>
+    <column name="is_delete" name2="isDelete" type="String" dbtype="VARCHAR" comment="\u662f\u5426\u5220\u9664" key="" decimal_digits="0" colums_size="1"/>
+  </table>
+  <table name="tb_goods_desc" name2="goodsDesc" comment="" key="goods_id">
+    <column name="goods_id" name2="goodsId" type="Long" dbtype="BIGINT" comment="SPU_ID" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="introduction" name2="introduction" type="String" dbtype="VARCHAR" comment="\u63cf\u8ff0" key="" decimal_digits="0" colums_size="3000"/>
+    <column name="specification_items" name2="specificationItems" type="String" dbtype="VARCHAR" comment="\u89c4\u683c\u7ed3\u679c\u96c6\uff0c\u6240\u6709\u89c4\u683c\uff0c\u5305\u542bisSelected" key="" decimal_digits="0" colums_size="3000"/>
+    <column name="custom_attribute_items" name2="customAttributeItems" type="String" dbtype="VARCHAR" comment="\u81ea\u5b9a\u4e49\u5c5e\u6027\uff08\u53c2\u6570\u7ed3\u679c\uff09" key="" decimal_digits="0" colums_size="3000"/>
+    <column name="item_images" name2="itemImages" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="3000"/>
+    <column name="package_list" name2="packageList" type="String" dbtype="VARCHAR" comment="\u5305\u88c5\u5217\u8868" key="" decimal_digits="0" colums_size="3000"/>
+    <column name="sale_service" name2="saleService" type="String" dbtype="VARCHAR" comment="\u552e\u540e\u670d\u52a1" key="" decimal_digits="0" colums_size="3000"/>
+  </table>
+  <table name="tb_item" name2="item" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u5546\u54c1id\uff0c\u540c\u65f6\u4e5f\u662f\u5546\u54c1\u7f16\u53f7" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="title" name2="title" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u6807\u9898" key="" decimal_digits="0" colums_size="100"/>
+    <column name="sell_point" name2="sellPoint" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u5356\u70b9" key="" decimal_digits="0" colums_size="500"/>
+    <column name="price" name2="price" type="Double" dbtype="DECIMAL" comment="\u5546\u54c1\u4ef7\u683c\uff0c\u5355\u4f4d\u4e3a\uff1a\u5143" key="" decimal_digits="2" colums_size="20"/>
+    <column name="stock_count" name2="stockCount" type="Integer" dbtype="INT" comment="" key="" decimal_digits="0" colums_size="10"/>
+    <column name="num" name2="num" type="Integer" dbtype="INT" comment="\u5e93\u5b58\u6570\u91cf" key="" decimal_digits="0" colums_size="10"/>
+    <column name="barcode" name2="barcode" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u6761\u5f62\u7801" key="" decimal_digits="0" colums_size="30"/>
+    <column name="image" name2="image" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u56fe\u7247" key="" decimal_digits="0" colums_size="2000"/>
+    <column name="categoryId" name2="categoryId" type="Long" dbtype="BIGINT" comment="\u6240\u5c5e\u7c7b\u76ee\uff0c\u53f6\u5b50\u7c7b\u76ee" key="" decimal_digits="0" colums_size="19"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u72b6\u6001\uff0c1-\u6b63\u5e38\uff0c2-\u4e0b\u67b6\uff0c3-\u5220\u9664" key="" decimal_digits="0" colums_size="1"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="update_time" name2="updateTime" type="java.util.Date" dbtype="DATETIME" comment="\u66f4\u65b0\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="item_sn" name2="itemSn" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="30"/>
+    <column name="cost_pirce" name2="costPirce" type="Double" dbtype="DECIMAL" comment="" key="" decimal_digits="2" colums_size="10"/>
+    <column name="market_price" name2="marketPrice" type="Double" dbtype="DECIMAL" comment="" key="" decimal_digits="2" colums_size="10"/>
+    <column name="is_default" name2="isDefault" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="1"/>
+    <column name="goods_id" name2="goodsId" type="Long" dbtype="BIGINT" comment="" key="" decimal_digits="0" colums_size="19"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="30"/>
+    <column name="cart_thumbnail" name2="cartThumbnail" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="150"/>
+    <column name="category" name2="category" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="200"/>
+    <column name="brand" name2="brand" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="100"/>
+    <column name="spec" name2="spec" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="200"/>
+    <column name="seller" name2="seller" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="200"/>
+  </table>
+  <table name="tb_item_cat" name2="itemCat" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u7c7b\u76eeID" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="parent_id" name2="parentId" type="Long" dbtype="BIGINT" comment="\u7236\u7c7b\u76eeID=0\u65f6\uff0c\u4ee3\u8868\u7684\u662f\u4e00\u7ea7\u7684\u7c7b\u76ee" key="" decimal_digits="0" colums_size="19"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u7c7b\u76ee\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="type_id" name2="typeId" type="Long" dbtype="BIGINT" comment="\u7c7b\u578bid" key="" decimal_digits="0" colums_size="19"/>
+  </table>
+  <table name="tb_order" name2="order" comment="" key="order_id">
+    <column name="order_id" name2="orderId" type="Long" dbtype="BIGINT" comment="\u8ba2\u5355id" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="payment" name2="payment" type="Double" dbtype="DECIMAL" comment="\u5b9e\u4ed8\u91d1\u989d\u3002\u7cbe\u786e\u52302\u4f4d\u5c0f\u6570;\u5355\u4f4d:\u5143\u3002\u5982:200.07\uff0c\u8868\u793a:200\u51437\u5206" key="" decimal_digits="2" colums_size="20"/>
+    <column name="payment_type" name2="paymentType" type="String" dbtype="VARCHAR" comment="\u652f\u4ed8\u7c7b\u578b\uff0c1\u3001\u5728\u7ebf\u652f\u4ed8\uff0c2\u3001\u8d27\u5230\u4ed8\u6b3e" key="" decimal_digits="0" colums_size="1"/>
+    <column name="post_fee" name2="postFee" type="String" dbtype="VARCHAR" comment="\u90ae\u8d39\u3002\u7cbe\u786e\u52302\u4f4d\u5c0f\u6570;\u5355\u4f4d:\u5143\u3002\u5982:200.07\uff0c\u8868\u793a:200\u51437\u5206" key="" decimal_digits="0" colums_size="50"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u72b6\u6001\uff1a1\u3001\u672a\u4ed8\u6b3e\uff0c2\u3001\u5df2\u4ed8\u6b3e\uff0c3\u3001\u672a\u53d1\u8d27\uff0c4\u3001\u5df2\u53d1\u8d27\uff0c5\u3001\u4ea4\u6613\u6210\u529f\uff0c6\u3001\u4ea4\u6613\u5173\u95ed,7\u3001\u5f85\u8bc4\u4ef7" key="" decimal_digits="0" colums_size="1"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u8ba2\u5355\u521b\u5efa\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="update_time" name2="updateTime" type="java.util.Date" dbtype="DATETIME" comment="\u8ba2\u5355\u66f4\u65b0\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="payment_time" name2="paymentTime" type="java.util.Date" dbtype="DATETIME" comment="\u4ed8\u6b3e\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="consign_time" name2="consignTime" type="java.util.Date" dbtype="DATETIME" comment="\u53d1\u8d27\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="end_time" name2="endTime" type="java.util.Date" dbtype="DATETIME" comment="\u4ea4\u6613\u5b8c\u6210\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="close_time" name2="closeTime" type="java.util.Date" dbtype="DATETIME" comment="\u4ea4\u6613\u5173\u95ed\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="shipping_name" name2="shippingName" type="String" dbtype="VARCHAR" comment="\u7269\u6d41\u540d\u79f0" key="" decimal_digits="0" colums_size="20"/>
+    <column name="shipping_code" name2="shippingCode" type="String" dbtype="VARCHAR" comment="\u7269\u6d41\u5355\u53f7" key="" decimal_digits="0" colums_size="20"/>
+    <column name="user_id" name2="userId" type="String" dbtype="VARCHAR" comment="\u7528\u6237id" key="" decimal_digits="0" colums_size="50"/>
+    <column name="buyer_message" name2="buyerMessage" type="String" dbtype="VARCHAR" comment="\u4e70\u5bb6\u7559\u8a00" key="" decimal_digits="0" colums_size="100"/>
+    <column name="buyer_nick" name2="buyerNick" type="String" dbtype="VARCHAR" comment="\u4e70\u5bb6\u6635\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="buyer_rate" name2="buyerRate" type="String" dbtype="VARCHAR" comment="\u4e70\u5bb6\u662f\u5426\u5df2\u7ecf\u8bc4\u4ef7" key="" decimal_digits="0" colums_size="2"/>
+    <column name="receiver_area_name" name2="receiverAreaName" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba\u5730\u533a\u540d\u79f0(\u7701\uff0c\u5e02\uff0c\u53bf)\u8857\u9053" key="" decimal_digits="0" colums_size="100"/>
+    <column name="receiver_mobile" name2="receiverMobile" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba\u624b\u673a" key="" decimal_digits="0" colums_size="12"/>
+    <column name="receiver_zip_code" name2="receiverZipCode" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba\u90ae\u7f16" key="" decimal_digits="0" colums_size="15"/>
+    <column name="receiver" name2="receiver" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba" key="" decimal_digits="0" colums_size="50"/>
+    <column name="expire" name2="expire" type="java.util.Date" dbtype="DATETIME" comment="\u8fc7\u671f\u65f6\u95f4\uff0c\u5b9a\u671f\u6e05\u7406" key="" decimal_digits="0" colums_size="19"/>
+    <column name="invoice_type" name2="invoiceType" type="String" dbtype="VARCHAR" comment="\u53d1\u7968\u7c7b\u578b(\u666e\u901a\u53d1\u7968\uff0c\u7535\u5b50\u53d1\u7968\uff0c\u589e\u503c\u7a0e\u53d1\u7968)" key="" decimal_digits="0" colums_size="1"/>
+    <column name="source_type" name2="sourceType" type="String" dbtype="VARCHAR" comment="\u8ba2\u5355\u6765\u6e90\uff1a1:app\u7aef\uff0c2\uff1apc\u7aef\uff0c3\uff1aM\u7aef\uff0c4\uff1a\u5fae\u4fe1\u7aef\uff0c5\uff1a\u624b\u673aqq\u7aef" key="" decimal_digits="0" colums_size="1"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u5546\u5bb6ID" key="" decimal_digits="0" colums_size="100"/>
+  </table>
+  <table name="tb_order_item" name2="orderItem" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="item_id" name2="itemId" type="Long" dbtype="BIGINT" comment="\u5546\u54c1id" key="" decimal_digits="0" colums_size="19"/>
+    <column name="goods_id" name2="goodsId" type="Long" dbtype="BIGINT" comment="SPU_ID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="order_id" name2="orderId" type="Long" dbtype="BIGINT" comment="\u8ba2\u5355id" key="" decimal_digits="0" colums_size="19"/>
+    <column name="title" name2="title" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u6807\u9898" key="" decimal_digits="0" colums_size="200"/>
+    <column name="price" name2="price" type="Double" dbtype="DECIMAL" comment="\u5546\u54c1\u5355\u4ef7" key="" decimal_digits="2" colums_size="20"/>
+    <column name="num" name2="num" type="Integer" dbtype="INT" comment="\u5546\u54c1\u8d2d\u4e70\u6570\u91cf" key="" decimal_digits="0" colums_size="10"/>
+    <column name="total_fee" name2="totalFee" type="Double" dbtype="DECIMAL" comment="\u5546\u54c1\u603b\u91d1\u989d" key="" decimal_digits="2" colums_size="20"/>
+    <column name="pic_path" name2="picPath" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u56fe\u7247\u5730\u5740" key="" decimal_digits="0" colums_size="200"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="" key="" decimal_digits="0" colums_size="100"/>
+  </table>
+  <table name="tb_pay_log" name2="payLog" comment="" key="out_trade_no">
+    <column name="out_trade_no" name2="outTradeNo" type="String" dbtype="VARCHAR" comment="\u652f\u4ed8\u8ba2\u5355\u53f7" key="PRI" decimal_digits="0" colums_size="30"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65e5\u671f" key="" decimal_digits="0" colums_size="19"/>
+    <column name="pay_time" name2="payTime" type="java.util.Date" dbtype="DATETIME" comment="\u652f\u4ed8\u5b8c\u6210\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="total_fee" name2="totalFee" type="Long" dbtype="BIGINT" comment="\u652f\u4ed8\u91d1\u989d\uff08\u5206\uff09" key="" decimal_digits="0" colums_size="19"/>
+    <column name="user_id" name2="userId" type="String" dbtype="VARCHAR" comment="\u7528\u6237ID" key="" decimal_digits="0" colums_size="50"/>
+    <column name="transaction_id" name2="transactionId" type="String" dbtype="VARCHAR" comment="\u4ea4\u6613\u53f7\u7801" key="" decimal_digits="0" colums_size="30"/>
+    <column name="trade_state" name2="tradeState" type="String" dbtype="VARCHAR" comment="\u4ea4\u6613\u72b6\u6001" key="" decimal_digits="0" colums_size="1"/>
+    <column name="order_list" name2="orderList" type="String" dbtype="VARCHAR" comment="\u8ba2\u5355\u7f16\u53f7\u5217\u8868" key="" decimal_digits="0" colums_size="200"/>
+    <column name="pay_type" name2="payType" type="String" dbtype="VARCHAR" comment="\u652f\u4ed8\u7c7b\u578b" key="" decimal_digits="0" colums_size="1"/>
+  </table>
+  <table name="tb_provinces" name2="provinces" comment="" key="id">
+    <column name="id" name2="id" type="Integer" dbtype="INT" comment="\u552f\u4e00ID" key="PRI" decimal_digits="0" colums_size="10"/>
+    <column name="provinceid" name2="provinceid" type="String" dbtype="VARCHAR" comment="\u7701\u4efdID" key="" decimal_digits="0" colums_size="20"/>
+    <column name="province" name2="province" type="String" dbtype="VARCHAR" comment="\u7701\u4efd\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+  </table>
+  <table name="tb_seckill_goods" name2="seckillGoods" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="goods_id" name2="goodsId" type="Long" dbtype="BIGINT" comment="spu ID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="item_id" name2="itemId" type="Long" dbtype="BIGINT" comment="sku ID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="title" name2="title" type="String" dbtype="VARCHAR" comment="\u6807\u9898" key="" decimal_digits="0" colums_size="100"/>
+    <column name="small_pic" name2="smallPic" type="String" dbtype="VARCHAR" comment="\u5546\u54c1\u56fe\u7247" key="" decimal_digits="0" colums_size="150"/>
+    <column name="price" name2="price" type="Double" dbtype="DECIMAL" comment="\u539f\u4ef7\u683c" key="" decimal_digits="2" colums_size="10"/>
+    <column name="cost_price" name2="costPrice" type="Double" dbtype="DECIMAL" comment="\u79d2\u6740\u4ef7\u683c" key="" decimal_digits="2" colums_size="10"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u5546\u5bb6ID" key="" decimal_digits="0" colums_size="100"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u6dfb\u52a0\u65e5\u671f" key="" decimal_digits="0" colums_size="19"/>
+    <column name="check_time" name2="checkTime" type="java.util.Date" dbtype="DATETIME" comment="\u5ba1\u6838\u65e5\u671f" key="" decimal_digits="0" colums_size="19"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u5ba1\u6838\u72b6\u6001" key="" decimal_digits="0" colums_size="1"/>
+    <column name="start_time" name2="startTime" type="java.util.Date" dbtype="DATETIME" comment="\u5f00\u59cb\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="end_time" name2="endTime" type="java.util.Date" dbtype="DATETIME" comment="\u7ed3\u675f\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="num" name2="num" type="Integer" dbtype="INT" comment="\u79d2\u6740\u5546\u54c1\u6570" key="" decimal_digits="0" colums_size="10"/>
+    <column name="stock_count" name2="stockCount" type="Integer" dbtype="INT" comment="\u5269\u4f59\u5e93\u5b58\u6570" key="" decimal_digits="0" colums_size="10"/>
+    <column name="introduction" name2="introduction" type="String" dbtype="VARCHAR" comment="\u63cf\u8ff0" key="" decimal_digits="0" colums_size="2000"/>
+  </table>
+  <table name="tb_seckill_order" name2="seckillOrder" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u4e3b\u952e" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="seckill_id" name2="seckillId" type="Long" dbtype="BIGINT" comment="\u79d2\u6740\u5546\u54c1ID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="money" name2="money" type="Double" dbtype="DECIMAL" comment="\u652f\u4ed8\u91d1\u989d" key="" decimal_digits="2" colums_size="10"/>
+    <column name="user_id" name2="userId" type="String" dbtype="VARCHAR" comment="\u7528\u6237" key="" decimal_digits="0" colums_size="50"/>
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u5546\u5bb6" key="" decimal_digits="0" colums_size="50"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="pay_time" name2="payTime" type="java.util.Date" dbtype="DATETIME" comment="\u652f\u4ed8\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u72b6\u6001" key="" decimal_digits="0" colums_size="1"/>
+    <column name="receiver_address" name2="receiverAddress" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba\u5730\u5740" key="" decimal_digits="0" colums_size="200"/>
+    <column name="receiver_mobile" name2="receiverMobile" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba\u7535\u8bdd" key="" decimal_digits="0" colums_size="20"/>
+    <column name="receiver" name2="receiver" type="String" dbtype="VARCHAR" comment="\u6536\u8d27\u4eba" key="" decimal_digits="0" colums_size="20"/>
+    <column name="transaction_id" name2="transactionId" type="String" dbtype="VARCHAR" comment="\u4ea4\u6613\u6d41\u6c34" key="" decimal_digits="0" colums_size="30"/>
+  </table>
+  <table name="tb_seller" name2="seller" comment="" key="seller_id">
+    <column name="seller_id" name2="sellerId" type="String" dbtype="VARCHAR" comment="\u7528\u6237ID" key="PRI" decimal_digits="0" colums_size="100"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u516c\u53f8\u540d" key="" decimal_digits="0" colums_size="80"/>
+    <column name="nick_name" name2="nickName" type="String" dbtype="VARCHAR" comment="\u5e97\u94fa\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="password" name2="password" type="String" dbtype="VARCHAR" comment="\u5bc6\u7801" key="" decimal_digits="0" colums_size="60"/>
+    <column name="email" name2="email" type="String" dbtype="VARCHAR" comment="EMAIL" key="" decimal_digits="0" colums_size="40"/>
+    <column name="mobile" name2="mobile" type="String" dbtype="VARCHAR" comment="\u516c\u53f8\u624b\u673a" key="" decimal_digits="0" colums_size="11"/>
+    <column name="telephone" name2="telephone" type="String" dbtype="VARCHAR" comment="\u516c\u53f8\u7535\u8bdd" key="" decimal_digits="0" colums_size="50"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u72b6\u6001" key="" decimal_digits="0" colums_size="1"/>
+    <column name="address_detail" name2="addressDetail" type="String" dbtype="VARCHAR" comment="\u8be6\u7ec6\u5730\u5740" key="" decimal_digits="0" colums_size="100"/>
+    <column name="linkman_name" name2="linkmanName" type="String" dbtype="VARCHAR" comment="\u8054\u7cfb\u4eba\u59d3\u540d" key="" decimal_digits="0" colums_size="50"/>
+    <column name="linkman_qq" name2="linkmanQq" type="String" dbtype="VARCHAR" comment="\u8054\u7cfb\u4ebaQQ" key="" decimal_digits="0" colums_size="13"/>
+    <column name="linkman_mobile" name2="linkmanMobile" type="String" dbtype="VARCHAR" comment="\u8054\u7cfb\u4eba\u7535\u8bdd" key="" decimal_digits="0" colums_size="11"/>
+    <column name="linkman_email" name2="linkmanEmail" type="String" dbtype="VARCHAR" comment="\u8054\u7cfb\u4ebaEMAIL" key="" decimal_digits="0" colums_size="40"/>
+    <column name="license_number" name2="licenseNumber" type="String" dbtype="VARCHAR" comment="\u8425\u4e1a\u6267\u7167\u53f7" key="" decimal_digits="0" colums_size="20"/>
+    <column name="tax_number" name2="taxNumber" type="String" dbtype="VARCHAR" comment="\u7a0e\u52a1\u767b\u8bb0\u8bc1\u53f7" key="" decimal_digits="0" colums_size="20"/>
+    <column name="org_number" name2="orgNumber" type="String" dbtype="VARCHAR" comment="\u7ec4\u7ec7\u673a\u6784\u4ee3\u7801" key="" decimal_digits="0" colums_size="20"/>
+    <column name="address" name2="address" type="Long" dbtype="BIGINT" comment="\u516c\u53f8\u5730\u5740" key="" decimal_digits="0" colums_size="19"/>
+    <column name="logo_pic" name2="logoPic" type="String" dbtype="VARCHAR" comment="\u516c\u53f8LOGO\u56fe" key="" decimal_digits="0" colums_size="100"/>
+    <column name="brief" name2="brief" type="String" dbtype="VARCHAR" comment="\u7b80\u4ecb" key="" decimal_digits="0" colums_size="2000"/>
+    <column name="create_time" name2="createTime" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65e5\u671f" key="" decimal_digits="0" colums_size="19"/>
+    <column name="legal_person" name2="legalPerson" type="String" dbtype="VARCHAR" comment="\u6cd5\u5b9a\u4ee3\u8868\u4eba" key="" decimal_digits="0" colums_size="40"/>
+    <column name="legal_person_card_id" name2="legalPersonCardId" type="String" dbtype="VARCHAR" comment="\u6cd5\u5b9a\u4ee3\u8868\u4eba\u8eab\u4efd\u8bc1" key="" decimal_digits="0" colums_size="25"/>
+    <column name="bank_user" name2="bankUser" type="String" dbtype="VARCHAR" comment="\u5f00\u6237\u884c\u8d26\u53f7\u540d\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="bank_name" name2="bankName" type="String" dbtype="VARCHAR" comment="\u5f00\u6237\u884c" key="" decimal_digits="0" colums_size="100"/>
+  </table>
+  <table name="tb_specification" name2="specification" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u4e3b\u952e" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="spec_name" name2="specName" type="String" dbtype="VARCHAR" comment="\u540d\u79f0" key="" decimal_digits="0" colums_size="255"/>
+  </table>
+  <table name="tb_specification_option" name2="specificationOption" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="\u89c4\u683c\u9879ID" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="option_name" name2="optionName" type="String" dbtype="VARCHAR" comment="\u89c4\u683c\u9879\u540d\u79f0" key="" decimal_digits="0" colums_size="200"/>
+    <column name="spec_id" name2="specId" type="Long" dbtype="BIGINT" comment="\u89c4\u683cID" key="" decimal_digits="0" colums_size="19"/>
+    <column name="orders" name2="orders" type="Integer" dbtype="INT" comment="\u6392\u5e8f\u503c" key="" decimal_digits="0" colums_size="10"/>
+  </table>
+  <table name="tb_type_template" name2="typeTemplate" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u6a21\u677f\u540d\u79f0" key="" decimal_digits="0" colums_size="80"/>
+    <column name="spec_ids" name2="specIds" type="String" dbtype="VARCHAR" comment="\u5173\u8054\u89c4\u683c" key="" decimal_digits="0" colums_size="1000"/>
+    <column name="brand_ids" name2="brandIds" type="String" dbtype="VARCHAR" comment="\u5173\u8054\u54c1\u724c" key="" decimal_digits="0" colums_size="1000"/>
+    <column name="custom_attribute_items" name2="customAttributeItems" type="String" dbtype="VARCHAR" comment="\u81ea\u5b9a\u4e49\u5c5e\u6027" key="" decimal_digits="0" colums_size="2000"/>
+  </table>
+  <table name="tb_user" name2="user" comment="" key="id">
+    <column name="id" name2="id" type="Long" dbtype="BIGINT" comment="" key="PRI" decimal_digits="0" colums_size="19"/>
+    <column name="username" name2="username" type="String" dbtype="VARCHAR" comment="\u7528\u6237\u540d" key="" decimal_digits="0" colums_size="50"/>
+    <column name="password" name2="password" type="String" dbtype="VARCHAR" comment="\u5bc6\u7801\uff0c\u52a0\u5bc6\u5b58\u50a8" key="" decimal_digits="0" colums_size="32"/>
+    <column name="phone" name2="phone" type="String" dbtype="VARCHAR" comment="\u6ce8\u518c\u624b\u673a\u53f7" key="" decimal_digits="0" colums_size="20"/>
+    <column name="email" name2="email" type="String" dbtype="VARCHAR" comment="\u6ce8\u518c\u90ae\u7bb1" key="" decimal_digits="0" colums_size="50"/>
+    <column name="created" name2="created" type="java.util.Date" dbtype="DATETIME" comment="\u521b\u5efa\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+    <column name="updated" name2="updated" type="java.util.Date" dbtype="DATETIME" comment="" key="" decimal_digits="0" colums_size="19"/>
+    <column name="source_type" name2="sourceType" type="String" dbtype="VARCHAR" comment="\u4f1a\u5458\u6765\u6e90\uff1a1:PC\uff0c2\uff1aH5\uff0c3\uff1aAndroid\uff0c4\uff1aIOS\uff0c5\uff1aWeChat" key="" decimal_digits="0" colums_size="1"/>
+    <column name="nick_name" name2="nickName" type="String" dbtype="VARCHAR" comment="\u6635\u79f0" key="" decimal_digits="0" colums_size="50"/>
+    <column name="name" name2="name" type="String" dbtype="VARCHAR" comment="\u771f\u5b9e\u59d3\u540d" key="" decimal_digits="0" colums_size="50"/>
+    <column name="status" name2="status" type="String" dbtype="VARCHAR" comment="\u4f7f\u7528\u72b6\u6001\uff08Y\u6b63\u5e38 N\u975e\u6b63\u5e38\uff09" key="" decimal_digits="0" colums_size="1"/>
+    <column name="head_pic" name2="headPic" type="String" dbtype="VARCHAR" comment="\u5934\u50cf\u5730\u5740" key="" decimal_digits="0" colums_size="150"/>
+    <column name="qq" name2="qq" type="String" dbtype="VARCHAR" comment="QQ\u53f7\u7801" key="" decimal_digits="0" colums_size="20"/>
+    <column name="account_balance" name2="accountBalance" type="DECIMAL" dbtype="DECIMAL" comment="\u8d26\u6237\u4f59\u989d" key="" decimal_digits="0" colums_size="10"/>
+    <column name="is_mobile_check" name2="isMobileCheck" type="String" dbtype="VARCHAR" comment="\u624b\u673a\u662f\u5426\u9a8c\u8bc1 \uff080\u5426  1\u662f\uff09" key="" decimal_digits="0" colums_size="1"/>
+    <column name="is_email_check" name2="isEmailCheck" type="String" dbtype="VARCHAR" comment="\u90ae\u7bb1\u662f\u5426\u68c0\u6d4b\uff080\u5426  1\u662f\uff09" key="" decimal_digits="0" colums_size="1"/>
+    <column name="sex" name2="sex" type="String" dbtype="VARCHAR" comment="\u6027\u522b\uff0c1\u7537\uff0c2\u5973" key="" decimal_digits="0" colums_size="1"/>
+    <column name="user_level" name2="userLevel" type="Integer" dbtype="INT" comment="\u4f1a\u5458\u7b49\u7ea7" key="" decimal_digits="0" colums_size="10"/>
+    <column name="points" name2="points" type="Integer" dbtype="INT" comment="\u79ef\u5206" key="" decimal_digits="0" colums_size="10"/>
+    <column name="experience_value" name2="experienceValue" type="Integer" dbtype="INT" comment="\u7ecf\u9a8c\u503c" key="" decimal_digits="0" colums_size="10"/>
+    <column name="birthday" name2="birthday" type="java.util.Date" dbtype="DATETIME" comment="\u751f\u65e5" key="" decimal_digits="0" colums_size="19"/>
+    <column name="last_login_time" name2="lastLoginTime" type="java.util.Date" dbtype="DATETIME" comment="\u6700\u540e\u767b\u5f55\u65f6\u95f4" key="" decimal_digits="0" colums_size="19"/>
+  </table>
+</db>

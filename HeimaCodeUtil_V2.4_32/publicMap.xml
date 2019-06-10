@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <map key="db" value="pinyougoudb"/>
+  <map key="author" value="\u4f20\u667a\u64ad\u5ba2"/>
+  <map key="project" value="pinyougou"/>
+  <map key="path_3" value="seckill"/>
+  <map key="dbpassword" value="123456"/>
+  <map key="path_2" value="pinyougou"/>
+  <map key="projectComment" value="\u54c1\u4f18\u8d2d"/>
+  <map key="package" value="com.pinyougou.seckill"/>
+  <map key="path_1" value="com"/>
+  <map key="dbuser" value="root"/>
+  <map key="path_all" value="com/pinyougou/seckill"/>
+</root>
